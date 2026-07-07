@@ -1,2 +1,8 @@
-satwika - file compressor project
-hello world
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies arcu eu feugiat ornare.
+Duis in placerat ante. Nunc rhoncus tincidunt elit nec consectetur. Donec ut venenatis ex. 
+Nulla vitae eros consequat ex lobortis tempus vel eget eros. Aliquam sagittis sed purus sed 
+tristique. Pellentesque laoreet tempus dolor quis dapibus. Duis at tincidunt libero. Vivamus
+consectetur justo arcu, et sollicitudin ex ornare et. Vestibulum at eros nec lectus dignissim 
+eleifend ut rutrum tortor. Suspendisse efficitur sed nisi viverra iaculis. Ut euismod ipsum odio, 
+et pulvinar ex blandit semper. Cras nec nunc turpis. Pellentesque non convallis mauris. Nulla 
+dapibus lobortis purus, at aliquam nibh sagittis sit amet.

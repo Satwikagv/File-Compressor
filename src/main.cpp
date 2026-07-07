@@ -12,7 +12,6 @@ void print_usage(const std::string& prog_name, bool decompress_mode) {
 }
 
 int main(int argc, char* argv[]) {
-    // Detect binary run-name
     std::string prog_path = argv[0];
     size_t last_slash = prog_path.find_last_of("/\\");
     std::string prog_name = (last_slash == std::string::npos) ? prog_path : prog_path.substr(last_slash + 1);
