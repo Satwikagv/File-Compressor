@@ -6,7 +6,7 @@
 #include <istream>
 
 using BitCode = std::vector<bool>;
-
+ 
 using FrequencyTable = std::array<uint64_t, 256>;
 
 using CodeTable = std::array<BitCode, 256>;

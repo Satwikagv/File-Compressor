@@ -83,7 +83,7 @@ void generate_codes_helper(const HuffmanNode* node, BitCode& current_path, CodeT
 }
 
 CodeTable generate_codes(const HuffmanNode* root) {
-    CodeTable table{};
+    CodeTable table{}; 
     if (!root) return table;
 
     BitCode current_path;

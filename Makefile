@@ -11,7 +11,7 @@ release: CXXFLAGS += -O3
 release: clean_bin compress decompress
 
 debug: CXXFLAGS += -g -O0
-debug: clean_bin compress decompress
+debug: clean_bin compress decompress 
 
 compress: $(OBJ)
 	$(CXX) $(CXXFLAGS) -o compress $(OBJ)

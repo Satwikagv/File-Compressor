@@ -52,5 +52,5 @@ public:
 private:
     std::istream& in_;
     uint8_t buffer_;
-    uint8_t bit_index_;
+    uint8_t bit_index_; 
 };

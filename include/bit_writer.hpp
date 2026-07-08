@@ -49,7 +49,7 @@ public:
             buffer_ = 0;
             bit_count_ = 0;
         }
-        out_.flush();
+        out_.flush();  
     }
 
 private:

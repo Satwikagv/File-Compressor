@@ -4,7 +4,7 @@
 #include <istream>
 #include <ostream>
 
-bool compress_stream(std::istream& input, std::ostream& output);
+bool compress_stream(std::istream& input, std::ostream& output);  
 
 bool decompress_stream(std::istream& input, std::ostream& output);
 

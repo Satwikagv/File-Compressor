@@ -37,7 +37,7 @@ bool compress_stream(std::istream& input, std::ostream& output) {
     }
 
     for (int j = 7; j >= 0; --j) {
-        output.put(static_cast<char>((original_size >> (j * 8)) & 0xFF));
+        output.put(static_cast<char>((original_size >> (j * 8)) & 0xFF)); 
     }
 
     input.clear();

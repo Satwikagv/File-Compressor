@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    std::string src = argv[1];
+    std::string src = argv[1]; 
     std::string dest = argv[2];
 
     auto start_time = std::chrono::high_resolution_clock::now();

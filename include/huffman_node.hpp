@@ -7,7 +7,7 @@ struct HuffmanNode {
     uint8_t byte;
     uint64_t frequency;
     std::unique_ptr<HuffmanNode> left;
-    std::unique_ptr<HuffmanNode> right;
+    std::unique_ptr<HuffmanNode> right; 
 
     HuffmanNode(uint8_t b, uint64_t f)
         : byte(b), frequency(f), left(nullptr), right(nullptr) {}
