@@ -5,8 +5,8 @@ import hashlib
 import random
 
 # File paths
-COMPRESS_BIN = "../compress"
-DECOMPRESS_BIN = "../decompress"
+COMPRESS_BIN = "./compress"
+DECOMPRESS_BIN = "./decompress"
 TEST_DIR = "test_files"
 
 def calculate_md5(filepath):
@@ -23,7 +23,7 @@ def create_test_files():
     with open(os.path.join(TEST_DIR, "repetitive.txt"), "w") as f:
         f.write("A" * (1024 * 1024))
         
-    # 2.Repetitive sample text
+    # 2.Repetitive lorem text
     sample_text = (
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
@@ -34,7 +34,7 @@ def create_test_files():
     with open(os.path.join(TEST_DIR, "lorem_text.txt"), "w") as f:
         f.write(sample_text * 8000) # Roughly 3.5 MB
         
-    # 3. random file - 100KB
+    # 3. random binary file - 100KB
     with open(os.path.join(TEST_DIR, "random.bin"), "wb") as f:
         f.write(os.urandom(100 * 1024))
         
@@ -46,7 +46,7 @@ def create_test_files():
     with open(os.path.join(TEST_DIR, "single_char.txt"), "w") as f:
         f.write("X" * 100)
         
-    # 6.small file
+    # 6.tiny file
     with open(os.path.join(TEST_DIR, "tiny.txt"), "w") as f:
         f.write("hello")
 
@@ -92,7 +92,7 @@ def run_benchmarks():
         else:
             verified = "Failed"
             
-        # 3. Gzip Compression (Level 6 default)
+        #Gzip Compression
         # We copy file to compress with gzip to keep original intact
         subprocess.run(["cp", orig_path, gzip_path + "_tmp"])
         gzip_time, gzip_success = run_command(["gzip", "-f", gzip_path + "_tmp"])

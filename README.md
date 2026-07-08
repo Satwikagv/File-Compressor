@@ -80,9 +80,17 @@ Implements the overall compression and decompression workflow.
 5. Write the restored file.
 
 #### `huffman_tree.cpp`
-- Defines the Huffman node.
-- Builds the Huffman tree.
-- Generates Huffman codes from character frequencies using DFS.
+- Counts byte frequencies from the input stream.
+- Builds the Huffman tree using a min-heap: repeatedly pops the two
+  lowest-frequency nodes, merges them into a new parent, and reinserts
+  the parent until one root remains.
+- The heap is implemented manually over `std::vector` (`make_heap`/
+  `push_heap`/`pop_heap`) rather than `std::priority_queue`, since
+  `priority_queue::top()` only returns a `const` reference, and
+  `std::unique_ptr` can only be removed by moving — which needs
+  non-const access.
+- Generates Huffman codes by walking the tree with DFS + backtracking.
+
 
 #### `huffman_node.hpp`
 Defines the node structure used to construct the Huffman tree.
